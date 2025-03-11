@@ -1,0 +1,21 @@
+#include<iostream>
+#include<cmath>
+using namespace std;
+
+int main() {
+    double coupon,riskfree,n,parvalue,bondprice;
+    cout<<"Enter the coupon value : ";
+    cin>>coupon;
+    cout<<"Enter the risk free interest rate : ";
+    cin>>riskfree;
+    cout<<"Enter the number of years : ";
+    cin>>n;
+    cout<<"Enter the par value : ";
+    cin>>parvalue;
+
+    bondprice = (coupon / riskfree) * (1 - (1 / pow(1 + riskfree, n))) + (parvalue / pow(1 + riskfree, n));
+
+    cout<<bondprice;
+
+    return 0;
+}
