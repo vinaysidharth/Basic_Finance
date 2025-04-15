@@ -1,0 +1,31 @@
+#include<iostream>
+#include<cmath>
+using namespace std;
+double compound_interest();
+int main()
+    {
+    double output=compound_interest();
+    output;
+    return 0;
+    }
+
+double compound_interest() {
+    double principle;
+    double interest;
+    double tenure;
+    double total;
+    cout<<"Enter priciple deposited : ";
+    cin>>principle;
+    cout<<"Enter interest rate (decimals) : ";
+    cin>>interest;
+    cout<<"Enter tenure (No.of years) : ";
+    cin>>tenure;
+    for(int i=1;i<=tenure;i++)
+    {
+        total = principle*exp(interest*i);
+        cout<<"Year "<<i<<": "<<total<<endl;
+    }
+    
+    return total;
+
+}
